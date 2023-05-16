@@ -7,6 +7,10 @@ type TypeRootStackAdminList = {
 export type TypeRootStackParamList = {
     Auth: undefined;
     Home: undefined;
+    Trending: undefined;
+    Search: undefined;
+    Favorites: undefined;
+    Profile: undefined;
     NotFound: undefined;
 } & TypeRootStackAdminList;
 
