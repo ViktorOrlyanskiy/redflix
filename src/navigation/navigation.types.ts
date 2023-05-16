@@ -7,6 +7,7 @@ type TypeRootStackAdminList = {
 export type TypeRootStackParamList = {
     Auth: undefined;
     Home: undefined;
+    NotFound: undefined;
 } & TypeRootStackAdminList;
 
 export interface IRoute {

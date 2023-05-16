@@ -4,8 +4,13 @@ import Home from '@/components/screens/home/Home';
 
 import { IRoute } from './navigation.types';
 
-export const adminRoutes: IRoute[] = [
+export const userRoutes: IRoute[] = [
     { name: 'Home', component: Home },
     { name: 'Auth', component: Auth },
+];
+
+export const adminRoutes: IRoute[] = [
     { name: 'Admin', component: Admin, isAdmin: true },
 ];
+
+export const routes = [...userRoutes, ...adminRoutes];
