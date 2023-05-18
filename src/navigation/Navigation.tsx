@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react';
 import { BottomMenu } from '@/components/layouts/bottom-menu/BottomMenu';
 
 import { useAuth } from '@/hooks/useAuth';
+import { useCheckAuth } from '@/hooks/useCheckAuth';
 
 import { PrivateNavigator } from './PrivateNavigator';
 
@@ -14,6 +15,8 @@ export const Navigation: React.FC = () => {
     const { user } = useAuth();
     const [currentRoute, setCurrentRoute] = useState<string>();
     const navRef = useNavigationContainerRef();
+
+    useCheckAuth(currentRoute);
 
     useEffect(() => {
         setCurrentRoute(navRef.getCurrentRoute()?.name);
